@@ -4,5 +4,11 @@
   become: true
   gather_facts: true
 
+  # Needed for Ubuntu 16.04+ which does not have Python 2 installed by default
+   tasks:
+     - name: install python 2 
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal) 
+      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
   roles:
     - ansible-role-supervisord

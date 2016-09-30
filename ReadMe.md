@@ -6,13 +6,16 @@ Supervisord 3.3.1
 
 ### Testing
 
-A Vagrant/VirtualBox environment is provided in the /examples directory.  To get started:
+A Vagrant/VirtualBox environment is provided in the /examples directory, and has been tested against Ansible 2.1 and Ubuntu 16.04
+
+
+To get started:
 
 1. Install Vagrant, Virtualbox, and Ansible
 1. Change your directory into 'examples'
 1. Run 'vagrant up' to bring up the VM.
 
-An Ubuntu 15.10 VM will be spun up and supervisord installed.
+An Ubuntu 16.04 VM will be spun up and supervisord installed.
 To verify:
 
     vagrant ssh

@@ -1,5 +1,13 @@
 VAGRANTFILE_API_VERSION = "2"
 
+# Install role dependencies
+system("
+    if [ #{ARGV[0]} = 'up' ]; then
+        echo 'Installing role dependencies'
+        ./install_role_requirements.sh
+    fi
+")
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
 #------------------------------------------------------------------------------
