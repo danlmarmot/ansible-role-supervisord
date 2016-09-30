@@ -6,7 +6,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 # Common settings for all VMs
 
     config.vm.synced_folder "shared", "/home/vagrant/shared"
-    config.vm.box = "ubuntu/wily64"
+    config.vm.box = "bento/ubuntu-16.04"
 
 #------------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         end
 
         example.vm.provision "ansible" do |ansible|
-             ansible.groups = {
+            ansible.groups = {
                  "vagrant_managed" => ["example"]
              }
             ansible.verbose = "vv"
