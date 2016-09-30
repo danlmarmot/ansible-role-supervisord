@@ -85,3 +85,6 @@ scratch
 
 # Ansible retry files
 *.retry
+
+# Vagrant directory
+/examples/.vagrant/

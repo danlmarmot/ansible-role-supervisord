@@ -1,0 +1,7 @@
+---
+# defaults file for supervisord
+supervisord:
+  version: 3.3.1
+  use_upstart: false
+  use_systemd: true
+  crashmail_address: user@example.com
